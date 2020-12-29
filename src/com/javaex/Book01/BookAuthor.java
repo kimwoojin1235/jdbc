@@ -53,7 +53,7 @@ public class BookAuthor {
 		bookDao.bookInsert(bisrtVo8);
 
 		// 책 정보 수정
-		BookVo bupdVo = new BookVo(5, "복학왕");
+		BookVo bupdVo = new BookVo(6, "홈즈");
 		bookDao.bookUpdate(bupdVo);
 
 
