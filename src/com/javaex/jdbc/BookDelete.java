@@ -27,7 +27,7 @@ public class BookDelete {
 			query += " DELETE FROM book";
 			query += " WHERE book_id = ?";
 			pstmt=conn.prepareStatement(query);
-			pstmt.setInt(1, 9);
+			pstmt.setInt(1, 36);
 			int count=pstmt.executeUpdate();
 		    // 4.결과처리
 			System.out.println(count+"건이 삭제되었습니다.");

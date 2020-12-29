@@ -31,7 +31,7 @@ public class BookUpdate {
 			
 			pstmt=conn.prepareStatement(query); //쿼리문 만들기
 			pstmt.setString(1, "셜록홈즈 단편");
-			pstmt.setInt(2, 9);
+			pstmt.setInt(2, 35);
 			int count=pstmt.executeUpdate();
 			
 		    // 4.결과처리
