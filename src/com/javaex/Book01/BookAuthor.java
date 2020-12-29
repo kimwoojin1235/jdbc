@@ -9,13 +9,10 @@ public class BookAuthor {
 
 	public static void main(String[] args) {
 
-		// 작가 등록(6명)
+		// 작가 6명 등록
 		// AuthorDao, AuthorVo 이용
 		AuthorDao aDao = new AuthorDao();
-
-		List<AuthorVo> aList = aDao.getAuthorList();
-
-		// INSERT
+		// 작가 6명 등록
 		AuthorVo aisrtVo1 = new AuthorVo("이문열", "경상북도 영양");
 		AuthorVo aisrtVo2 = new AuthorVo("박경리", "경상남도 통영");
 		AuthorVo aisrtVo3 = new AuthorVo("유시민", "제17대 국회의원");
@@ -32,11 +29,11 @@ public class BookAuthor {
 
 		// 책 8권 저장
 		// BookDao, BookVo 이용
-		BookDao bDao = new BookDao();
+		BookDao bookDao = new BookDao();
+		//책 리스트
+		List<BookVo> booklist = bookDao.getBookList();
 
-		List<BookVo> booklist = bDao.getBookList();
-
-		// INSERT
+		// 책 8권 저장
 		BookVo bisrtVo1 = new BookVo("우리들의 일그러진 영웅", "다림", "98/02/22", 1);
 		BookVo bisrtVo2 = new BookVo("삼국지", "민음사", "02/03/01", 1);
 		BookVo bisrtVo3 = new BookVo("토지", "마로니에북스", "12/08/15", 2);
@@ -46,33 +43,31 @@ public class BookAuthor {
 		BookVo bisrtVo7 = new BookVo("오직 두 사람", "문학동네", "17/05/04", 6);
 		BookVo bisrtVo8 = new BookVo("26년", "재미주의", "12/02/04", 5);
 
-		bDao.bookInsert(bisrtVo1);
-		bDao.bookInsert(bisrtVo2);
-		bDao.bookInsert(bisrtVo3);
-		bDao.bookInsert(bisrtVo4);
-		bDao.bookInsert(bisrtVo5);
-		bDao.bookInsert(bisrtVo6);
-		bDao.bookInsert(bisrtVo7);
-		bDao.bookInsert(bisrtVo8);
+		bookDao.bookInsert(bisrtVo1);
+		bookDao.bookInsert(bisrtVo2);
+		bookDao.bookInsert(bisrtVo3);
+		bookDao.bookInsert(bisrtVo4);
+		bookDao.bookInsert(bisrtVo5);
+		bookDao.bookInsert(bisrtVo6);
+		bookDao.bookInsert(bisrtVo7);
+		bookDao.bookInsert(bisrtVo8);
 
-		// UPDATE
+		// 책 정보 수정
 		BookVo bupdVo = new BookVo(5, "복학왕");
-		bDao.bookUpdate(bupdVo);
+		bookDao.bookUpdate(bupdVo);
 
 
 
-		// Delete
-		bDao.bookDelete(5);
+		// 책 삭제
+		bookDao.bookDelete(5);
 
 		// 전체 출력(작가 ↔ 책 조인)
-		// BookVo 중요
-		booklist = bDao.getBookListAll();
+		booklist = bookDao.getBookListAll();
 		System.out.println("------리스트-----");
 		for (int i = 0; i < booklist.size(); i++) {
-
-			BookVo info = booklist.get(i);
-			System.out.println(info.book_id + ", " + info.title + ", " + info.pubs + ", " + info.pub_date + ", "
-					+ info.author_id + ", " + info.authorName + ", " + info.authorDesc);
+			BookVo books = booklist.get(i);
+			System.out.println(books.book_id + ", " + books.title + ", " + books.pubs + ", " + books.pub_date + ", "
+					+ books.author_id + ", " + books.authorName + ", " + books.authorDesc);
 		}
 
 	}
