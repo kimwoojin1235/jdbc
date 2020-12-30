@@ -109,11 +109,11 @@ public class BookDao {
 			// 4.결과처리
 			while (rs.next()) {
 
-				int book_id = rs.getInt("book_id");// int aId = rs.getInt(1);
-				String title = rs.getString("title");// String aName = rs.getInt(2);
-				String pubs = rs.getString("pubs");// String aDesc = rs.getInt(3);
-				String pub_date = rs.getString("pub_date");// String aDesc = rs.getInt(3);
-				int author_id = rs.getInt("author_id");// String aDesc = rs.getInt(3);
+				int book_id = rs.getInt("book_id");
+				String title = rs.getString("title");
+				String pubs = rs.getString("pubs");
+				String pub_date = rs.getString("pub_date");
+				int author_id = rs.getInt("author_id");
 
 				BookVo bvo01 = new BookVo(book_id, title, pubs, pub_date, author_id);
 
@@ -185,13 +185,13 @@ public class BookDao {
 			// 4.결과처리
 			while (rs.next()) {
 
-				int book_id = rs.getInt("book_id");// int bId = rs.getInt(book_id);
-				String title = rs.getString("title");// String bTitle = rs.getInt(title);
-				String pubs = rs.getString("pubs");// String bPubs = rs.getInt(pubs);
-				String pub_date = rs.getString("pub_date");// String bPubD = rs.getInt(pub_date);
-				int author_id = rs.getInt("author_id");// int aId = rs.getInt(a.author_id);
-				String author_name = rs.getString("author_name");// String aName = rs.getInt(author_name);
-				String author_desc = rs.getString("author_desc");// String aDesc = rs.getInt(author_desc);
+				int book_id = rs.getInt("book_id");
+				String title = rs.getString("title");
+				String pubs = rs.getString("pubs");
+				String pub_date = rs.getString("pub_date");
+				int author_id = rs.getInt("author_id");
+				String author_name = rs.getString("author_name");
+				String author_desc = rs.getString("author_desc");
 
 				BookVo bvo02 = new BookVo(book_id, title, pubs, pub_date, author_id, author_name, author_desc);
 
