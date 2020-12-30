@@ -63,9 +63,9 @@ public class BookAuthor {
 		BookVo bupdVo = new BookVo(6, "홈즈");
 		bookDao.bookUpdate(bupdVo);
 		// 책 삭제
-		bookDao.bookDelete(5);
+		bookDao.bookDelete(3);
 
-		// 전체 출력(작가 ↔ 책 조인)
+		// 전체 출력
 		booklist = bookDao.getBookListAll();
 		System.out.println("------리스트-----");
 		for (int i = 0; i < booklist.size(); i++) {
