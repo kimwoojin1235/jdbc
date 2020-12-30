@@ -8,6 +8,7 @@ public class BookVo {
 	public int author_id;
 	public String authorName;
 	public String authorDesc;
+	
 	//수정
 	public BookVo(int book_id, String title) {
 		super();

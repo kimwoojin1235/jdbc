@@ -13,19 +13,22 @@ public class BookAuthor {
 		// AuthorDao, AuthorVo 이용
 		AuthorDao authorDao = new AuthorDao();
 		// 작가 6명 등록
-		AuthorVo aisrtVo1 = new AuthorVo("이문열", "경상북도 영양");
-		AuthorVo aisrtVo2 = new AuthorVo("박경리", "경상남도 통영");
-		AuthorVo aisrtVo3 = new AuthorVo("유시민", "제17대 국회의원");
-		AuthorVo aisrtVo4 = new AuthorVo("기안84", "기안동 거주 84년생");
-		AuthorVo aisrtVo5 = new AuthorVo("강풀", "1세대 온라인만화가");
-		AuthorVo aisrtVo6 = new AuthorVo("김영하", "알쓸신잡");
+		AuthorVo authorVo1 = new AuthorVo("이문열", "경상북도 영양");
+		AuthorVo authorVo2 = new AuthorVo("박경리", "경상남도 통영");
+		AuthorVo authorVo3 = new AuthorVo("유시민", "제17대 국회의원");
+		AuthorVo authorVo4 = new AuthorVo("기안84", "기안동 거주 84년생");
+		AuthorVo authorVo5 = new AuthorVo("강풀", "1세대 온라인만화가");
+		AuthorVo authorVo6 = new AuthorVo("김영하", "알쓸신잡");
 
-		authorDao.authorInsert(aisrtVo1);
-		authorDao.authorInsert(aisrtVo2);
-		authorDao.authorInsert(aisrtVo3);
-		authorDao.authorInsert(aisrtVo4);
-		authorDao.authorInsert(aisrtVo5);
-		authorDao.authorInsert(aisrtVo6);
+		authorDao.authorInsert(authorVo1);
+		authorDao.authorInsert(authorVo2);
+		authorDao.authorInsert(authorVo3);
+		authorDao.authorInsert(authorVo4);
+		authorDao.authorInsert(authorVo5);
+		authorDao.authorInsert(authorVo6);
+		
+		AuthorVo authorVo7 = new AuthorVo(5,"코난도일","베이커리가");
+		authorDao.authorUpdate(authorVo7);
 		
 		authorList = authorDao.getAuthorList();
 		System.out.println("=========작가 리스트========");
