@@ -12,7 +12,7 @@ public class AuthorDao {
 
 	// 필드
 	private String driver = "oracle.jdbc.driver.OracleDriver";
-	private String url1 = "jdbc:oracle:thin:@localhost:1521:xe";
+	private String url = "jdbc:oracle:thin:@localhost:1521:xe";
 	private String id = "webdb";
 	private String pw = "webdb";
 	//db의 정보를 모아서 한번에 관리를 하면 정보가 수정이되면 수정을 하기 편리하다.
@@ -32,7 +32,6 @@ public class AuthorDao {
 			// 1. JDBC 드라이버 (Oracle) 로딩
 			Class.forName(driver);
 			// 2. Connection 얻어오기
-			String url = url1;
 			conn = DriverManager.getConnection(url, id, pw);
 			// 3. SQL문 준비 / 바인딩 / 실행
 			/*
@@ -86,7 +85,6 @@ public class AuthorDao {
 			// 1. JDBC 드라이버 (Oracle) 로딩
 			Class.forName(driver);
 			// 2. Connection 얻어오기
-			String url = url1;
 			conn = DriverManager.getConnection(url, id, pw);
 
 			// 3. SQL문 준비 / 바인딩 / 실행
@@ -137,7 +135,6 @@ public class AuthorDao {
 			// 1. JDBC 드라이버 (Oracle) 로딩
 			Class.forName(driver);
 			// 2. Connection 얻어오기
-			String url = url1;
 			conn = DriverManager.getConnection(url, id, pw);
 
 			// 3. SQL문 준비 / 바인딩 / 실행
@@ -197,7 +194,6 @@ public class AuthorDao {
 			// 1. JDBC 드라이버 (Oracle) 로딩
 			Class.forName(driver);
 			// 2. Connection 얻어오기
-			String url = url1;
 			conn = DriverManager.getConnection(url, id, pw);
 			// 3. SQL문 준비 / 바인딩 / 실행
 			String query = "";
